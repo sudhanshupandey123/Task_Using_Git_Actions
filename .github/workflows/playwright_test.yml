@@ -20,6 +20,7 @@ jobs:
         python -m pip install behave
         python -m pip install playwright
         python -m pip install allure-behave
+        python -m pip install python-dotenv
         
      - name: Run tests
        run: |
