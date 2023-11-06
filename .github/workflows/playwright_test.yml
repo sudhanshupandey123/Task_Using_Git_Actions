@@ -27,21 +27,23 @@ jobs:
        run: |
          python runner_behave.py
 
-     - name: Get Allure history # Step to retrieve Allure history
-       uses: actions/checkout@v3
-       if: always() # Execute even if previous steps fail
-       continue-on-error: true # Continue execution even if the step fails
+     - name: Get Allure history
+       uses: actions/checkout@v2
+       if: always()
+       continue-on-error: true
        with:
-           ref: gh-pages # Specify the branch to retrieve Allure history from
-           path: gh-pages # Set the destination path for Allure history
+         ref: gh-pages
+         path: gh-pages
 
-     - name: Allure report action # Step to generate Allure report
+     - name: Test marketplace action
        uses: simple-elf/allure-report-action@master
-       if: always() # Execute even if previous steps fail
+       if: always()
+       id: allure-report
        with:
-          allure_results: ${{ vars.ALLURE_RESULTS_PATH }} # Specify the directory containing Allure results
-          allure_history: allure-history # Specify the directory to store Allure history
-          keep_reports: 5 # Specify the number of previous reports to keep
+          allure_results: build/allure-results
+          gh_pages: gh-pages
+          allure_report: allure-report
+          allure_history: allure-history
 
      - name: Deploy report to Github Pages
        if: always()
