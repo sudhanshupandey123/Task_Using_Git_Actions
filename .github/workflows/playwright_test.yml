@@ -43,10 +43,10 @@ jobs:
           allure_history: allure-history # Specify the directory to store Allure history
           keep_reports: 5 # Specify the number of previous reports to keep
 
-     - name: Deploy Allure report to GitHub Pages # Step to deploy Allure report to GitHub Pages
-       if: always() # Execute even if previous steps fail
-       uses: peaceiris/actions-gh-pages@v3
-       with:
-          github_token: ${{ secrets.GITHUB_TOKEN }} # Provide the GitHub token for authentication
-          publish_branch: gh-pages # Specify the branch to publish the report to
-          publish_dir: allure-history # Specify the directory containing the report
+     - name: Deploy report to Github Pages
+       if: always()
+       uses: peaceiris/actions-gh-pages@v2
+       env:
+          PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: allure-history
