@@ -34,11 +34,11 @@ jobs:
        with:
          source_file: "PDF_compiler"
          destination_repo: ${{ github.repository }}
-         destination_branch: "PDF_Baselines"
+         destination_branch: "main"
          destination_folder: ${{ github.run_number }}
          user_email: "sudhanshupandey848@gmail.com"
          user_name: "sudhanshupandey123"
-         commit_message: "Copy PDF baseline files"
+         commit_message: "Copy main"
 
      # - name: Copy Behave log files
      #   uses: dmnemec/copy_file_to_another_repo_action@main
