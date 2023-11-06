@@ -1,4 +1,4 @@
-from common_ui_actions import click, get_text_value, fill_area
+from common_ui_actions import click, get_text_value, fill_area, scroll
 
 search_box = "//input[@id='twotabsearchtextbox']"
 filtered_product_list = "//span[@class='a-size-medium a-color-base a-text-normal']"
@@ -25,6 +25,7 @@ def adding_to_cart(page, number_of_product):
             all_product_box.nth(index).click()
 
         page1 = popup_info.value
+        scroll(page)
         click(page1, add_to_cart_button)
         page1.close()
         page.bring_to_front()
