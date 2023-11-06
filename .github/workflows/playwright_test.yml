@@ -18,7 +18,7 @@ jobs:
         python -m pip install --upgrade pip
         python -m pip install behave
         python -m pip install playwright
-        python -m pip playwright-install
+        python -m playwright install
         python -m pip install allure-behave
         python -m pip install python-dotenv
     
