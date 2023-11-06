@@ -23,7 +23,7 @@ jobs:
         python -m pip install python-dotenv
      - name: Current Directory
        run: |
-         echo:"os.getcwd()"
+         ${{ github.workspace }}
         
      - name: Run tests
        run: |
