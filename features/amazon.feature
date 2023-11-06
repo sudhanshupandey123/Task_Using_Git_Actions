@@ -9,6 +9,6 @@ Feature: Amazon Page
     And Actual Price Should Be Same As Cart Price
     Examples:
       | product_name  | rating | product_count |
-      | Apple Laptop     | 4      | 2             |
+      | Hp Laptop     | 4      | 2             |
       | Lenovo Laptop | 3      | 2             |
 
