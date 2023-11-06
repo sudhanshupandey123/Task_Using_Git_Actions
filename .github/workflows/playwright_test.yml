@@ -22,10 +22,6 @@ jobs:
         python -m playwright install
         python -m pip install allure-behave
         python -m pip install python-dotenv
-     - name: Prepare Allure history # Step to prepare Allure history directory
-       run: |
-         cd ..
-         mkdir -p ${{ vars.ALLURE_RESULTS_PATH }}
     
      - name: Run tests
        run: |
