@@ -2,7 +2,7 @@ from common_ui_actions import click, get_text_value, fill_area, scroll
 
 search_box = "//input[@id='twotabsearchtextbox']"
 filtered_product_list = "//span[@class='a-size-medium a-color-base a-text-normal']"
-add_to_cart_button = "//input[@aria-labelledby='submit.add-to-cart-announce']"
+add_to_cart_button = "(//input[@aria-labelledby='submit.add-to-cart-announce'])[1]"
 
 def search_product(page, product_name):
     fill_area(page, search_box, product_name)
