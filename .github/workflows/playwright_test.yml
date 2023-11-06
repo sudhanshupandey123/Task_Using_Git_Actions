@@ -3,6 +3,9 @@ name: first workflow
 on: 
   push:
     branches: main 
+defaults:
+  run:
+    working-directory: docs
 
 jobs:
   build:
