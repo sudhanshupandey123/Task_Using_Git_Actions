@@ -36,5 +36,5 @@ def main(Project_Root):
 
 
 if __name__ == "__main__":
-    Project_Root="./features"
+    Project_Root="./"
     main(Project_Root)
