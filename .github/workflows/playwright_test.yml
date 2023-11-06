@@ -3,10 +3,6 @@ name: first workflow
 on: 
   push:
     branches: main 
-defaults:
-  run:
-    working-directory: docs
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -24,11 +20,7 @@ jobs:
         python -m pip install playwright
         python -m pip install allure-behave
         python -m pip install python-dotenv
-     - name: Run Markdown
-       working-directory: ${{env.working-directory}}
-       run: |
-         echo: "Path"
-      
+    
      - name: Run tests
        run: |
          python runner_behave.py
