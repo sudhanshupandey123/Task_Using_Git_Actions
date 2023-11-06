@@ -23,6 +23,8 @@ jobs:
         python -m pip install python-dotenv
      - name: Run Markdown
        working-directory: ${{env.working-directory}}
+       run: |
+         echo: "Path"
       
      - name: Run tests
        run: |
