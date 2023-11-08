@@ -31,32 +31,6 @@ jobs:
        run: |
          python runner_behave.py
          
-     # - name: Copy PDF baseline files
-     #   uses: dmnemec/copy_file_to_another_repo_action@main
-     #   env:
-     #     API_TOKEN_GITHUB: ${{ secrets.GITHUB_TOKEN }}
-     #   with:
-     #     source_file: "PDF_compiler"
-     #     destination_repo: ${{ github.repository }}
-     #     destination_branch: "main"
-     #     destination_folder: ${{ github.run_number }}
-     #     user_email: "sudhanshupandey848@gmail.com"
-     #     user_name: "sudhanshupandey123"
-     #     commit_message: "Copy main"
-
-     # - name: Copy Behave log files
-     #   uses: dmnemec/copy_file_to_another_repo_action@main
-     #   env:
-     #     API_TOKEN_GITHUB: ${{ secrets.GITHUB_TOKEN }}
-     #   with:
-     #     source_file: "reports/behave.log"
-     #     destination_repo: ${{ github.repository }}
-     #     destination_branch: "behave-logs"
-     #     destination_folder: ${{ github.run_number }}
-     #     user_email: "manoj.patil@atlascopco.com"
-     #     user_name: "manojatlas"
-     #     commit_message: "Behave log file for build"
-
      - name: Get Allure history
        uses: actions/checkout@v2
        if: always()
