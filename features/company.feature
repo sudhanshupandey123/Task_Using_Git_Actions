@@ -8,6 +8,6 @@ Feature: Company Details
     Then Successfully Make Csv file of all data
     Examples:
       | company_name                             |
-      | actualize consulting engineers pvt ltd   |
-      | Aimleap                                  |
+      | sulopa                                   |
+      | fluree                                   |
       | g7 cr technologies india private limited |
