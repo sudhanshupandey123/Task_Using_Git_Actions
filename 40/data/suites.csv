@@ -1,4 +1,0 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Tue Nov 07 08:50:37 GMT 2023","Tue Nov 07 08:51:58 GMT 2023","80573","","","","","","Extracting Company Details -- @1.1 ",""
-"passed","Tue Nov 07 08:51:58 GMT 2023","Tue Nov 07 08:53:29 GMT 2023","91131","","","","","","Extracting Company Details -- @1.2 ",""
-"passed","Tue Nov 07 08:53:29 GMT 2023","Tue Nov 07 08:54:57 GMT 2023","87813","","","","","","Extracting Company Details -- @1.3 ",""
