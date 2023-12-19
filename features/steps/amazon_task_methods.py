@@ -1,8 +1,9 @@
-from common_ui_actions import click, get_text_value, fill_area, scroll
+from common_ui_actions import click,  fill_area
 
 search_box = "//input[@id='twotabsearchtextbox']"
-filtered_product_list = "//span[@class='a-size-medium a-color-base a-text-normal']"
 add_to_cart_button = "(//div[@id='preAddToCartFramework_feature_div']/preceding-sibling::div[@id='addToCart_feature_div'])[2]/descendant::input[@id='add-to-cart-button']"
+filtered_product="//a[@class='a-link-normal s-no-outline']"
+cancel_button="//a[@id='attach-close_sideSheet-link']"
 
 def search_product(page, product_name):
     fill_area(page, search_box, product_name)
@@ -13,20 +14,13 @@ def filtering_product(page, rating_value):
     click(page, f"//section[@aria-label='{int(rating_value)} Stars & Up']")
 
 def adding_to_cart(page, number_of_product):
-    all_product_box = page.locator(filtered_product_list)
-    added_to_cart = 1
+    all_selected_product_link=[]
+    all_ele=page.locator(filtered_product)
+    for i in range(int(number_of_product)):
+        link="https://www.amazon.in"+all_ele.nth(i).get_attribute('href')
+        all_selected_product_link.append(link)
+    for i in all_selected_product_link:
+        page.goto(i)
+        click(page, add_to_cart_button)
+    click(page, cancel_button)
 
-    for index in range(0, all_product_box.count()):
-        if added_to_cart > int(number_of_product):
-            break
-
-        '''This Is Method For Handling Multiple Tab'''
-        with page.expect_popup() as popup_info:
-            all_product_box.nth(index).click()
-
-        page1 = popup_info.value
-        scroll(page)
-        click(page1, add_to_cart_button)
-        page1.close()
-        page.bring_to_front()
-        added_to_cart += 1
