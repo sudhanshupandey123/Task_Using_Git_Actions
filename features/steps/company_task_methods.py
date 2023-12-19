@@ -1,14 +1,13 @@
-import time
 from common_ui_actions import click, fill_area, get_text_value
 import re
 
 search_box = "//*[@id='APjFqb']"
-company_name = "//div[@class='SPZz6b']//h2"
+company_name = "//div[@role='heading' and @aria-level='2' and @data-attrid='title']"
 company_rating = "//*[@class='Aq14fc']"
 company_review = "//span[@class='hqzQac']//a//span"
 company_address = "//span[@class='LrzXr']"
 company_phone_number = "//span[@class='LrzXr zdqRlf kno-fv']//a//span"
-direction_button = "//a[@class='ab_button' and @tabindex='0']//div"
+direction_button = "(//span[@class='AQtWSd' and @aria-hidden='true'])[2]/following-sibling::div"
 
 
 def search_company(page, company_name):
@@ -23,7 +22,7 @@ def Extracting_Information(page):
     try:
         information['Company_Name'] = get_text_value(page, company_name)
     except:
-        information['Company_Name'] = page.title.split('-')[0]
+        information['Company_Name'] = page.title
 
     try:
         information['Company_Rating'] = get_text_value(page, company_rating)
