@@ -4,7 +4,8 @@ import csv
 
 
 
-
+Details = []
+#Taking This Variable Global because we need to search different compnay name and have to store in same csv file
 @given(u'User is On Google Page')
 def opening_google(context):
     """Opening Google For Searching About Company """
@@ -22,9 +23,8 @@ def searching_company(context, company_name):
 
 @when(u'He Extract Information')
 def extracting_information(context):
-    context.Details = []
     """Extract All Information Like Name of Company, Total Review etc.."""
-    context.Details.append(Extracting_Information(context.page))
+    Details.append(Extracting_Information(context.page))
 
 
 @then(u'Successfully Make Csv file of all data')
@@ -33,7 +33,7 @@ def making_csv(context):
 
     field_names = ['Company_Name', 'Company_Rating', 'Company_Review', 'Company_Address', 'Company_Contact_Number',
                    'Long_and_Lat']
-    with open('company_details.csv', 'a') as csvfile:
+    with open('company_details.csv', 'w') as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=field_names)
         writer.writeheader()
-        writer.writerows(context.Details)
+        writer.writerows(Details)
