@@ -1,6 +1,0 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Fri Dec 15 01:19:39 GMT 2023","Fri Dec 15 01:20:56 GMT 2023","77044","","","","","","Extracting Company Details -- @1.2 ",""
-"passed","Fri Dec 15 01:21:58 GMT 2023","Fri Dec 15 01:24:41 GMT 2023","163219","","","","","","Google Map Search Bar -- @1.1 ",""
-"broken","Fri Dec 15 01:20:56 GMT 2023","Fri Dec 15 01:21:58 GMT 2023","62086","","","","","","Extracting Company Details -- @1.3 ",""
-"broken","Fri Dec 15 01:18:35 GMT 2023","Fri Dec 15 01:19:39 GMT 2023","63987","","","","","","Extracting Company Details -- @1.1 ",""
-"passed","Fri Dec 15 01:24:41 GMT 2023","Fri Dec 15 01:26:49 GMT 2023","128040","","","","","","Google Map Search Bar -- @1.2 ",""
