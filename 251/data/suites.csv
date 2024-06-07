@@ -1,4 +1,0 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Fri May 17 01:18:33 GMT 2024","Fri May 17 01:20:30 GMT 2024","117008","","","","","","Extracting Company Details -- @1.1 ",""
-"passed","Fri May 17 01:20:30 GMT 2024","Fri May 17 01:23:10 GMT 2024","159772","","","","","","Extracting Company Details -- @1.2 ",""
-"passed","Fri May 17 01:23:10 GMT 2024","Fri May 17 01:25:03 GMT 2024","112585","","","","","","Extracting Company Details -- @1.3 ",""
