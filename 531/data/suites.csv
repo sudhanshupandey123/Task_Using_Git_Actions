@@ -1,0 +1,4 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","242333","Extracting Company Details -- @1.1 ","","Fri Feb 21 01:44:14 GMT 2025","passed","Fri Feb 21 01:48:17 GMT 2025","","","",""
+"","241305","Extracting Company Details -- @1.3 ","","Fri Feb 21 01:52:19 GMT 2025","passed","Fri Feb 21 01:56:20 GMT 2025","","","",""
+"","242078","Extracting Company Details -- @1.2 ","","Fri Feb 21 01:48:17 GMT 2025","passed","Fri Feb 21 01:52:19 GMT 2025","","","",""
