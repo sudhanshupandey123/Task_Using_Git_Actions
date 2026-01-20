@@ -1,0 +1,4 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","245507","Extracting Company Details -- @1.3 ","","Tue Jan 20 02:19:21 UTC 2026","passed","Tue Jan 20 02:23:26 UTC 2026","","","",""
+"","244144","Extracting Company Details -- @1.2 ","","Tue Jan 20 02:15:16 UTC 2026","passed","Tue Jan 20 02:19:21 UTC 2026","","","",""
+"","245800","Extracting Company Details -- @1.1 ","","Tue Jan 20 02:11:11 UTC 2026","passed","Tue Jan 20 02:15:16 UTC 2026","","","",""
