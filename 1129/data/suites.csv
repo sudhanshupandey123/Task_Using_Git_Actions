@@ -1,0 +1,4 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","40904","Extracting Company Details -- @1.2 ","","2026-10-12","broken","2026-10-12","","","",""
+"","42059","Extracting Company Details -- @1.1 ","","2026-10-12","broken","2026-10-12","","","",""
+"","40921","Extracting Company Details -- @1.3 ","","2026-10-12","broken","2026-10-12","","","",""
